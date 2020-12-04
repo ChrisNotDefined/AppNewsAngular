@@ -1,0 +1,16 @@
+<div class="body m-3 d-flex flex-row">
+  <div *ngFor="let new of featured" class="card">
+    <img *ngIf="new.imageUrl" src="{{new.imageUrl}}" class="card-img-top" alt="...">
+    <div class="card-header">
+      {{new.date | date}}
+    </div>
+    <div class="card-body">
+      <h5 class="card-title">{{new.title}}</h5>
+      <p class="card-text">{{new.description}}</p>
+      <div class="card-actions">
+        <a class="btn btn-dark">Editar</a>
+        <a class="btn btn-danger">Borrar</a>
+      </div>
+    </div>
+  </div>
+</div>

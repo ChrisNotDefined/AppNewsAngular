@@ -1,0 +1,17 @@
+.card {
+  min-width: 25em;
+  width: 45%;
+  margin: 0.5em;
+}
+
+.card-actions {
+  display: flex;
+  justify-content: space-between;
+}
+
+.body {
+  justify-content: space-between;
+  flex-wrap: wrap;
+  align-content: space-between;
+  justify-items: space-between;
+}

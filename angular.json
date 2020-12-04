@@ -123,6 +123,10 @@
           }
         }
       }
-    }},
-  "defaultProject": "Pract3"
+    }
+  },
+  "defaultProject": "Pract3",
+  "cli": {
+    "analytics": false
+  }
 }
