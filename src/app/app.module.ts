@@ -8,6 +8,7 @@ import { NavBarComponent } from './components/nav-bar/nav-bar.component';
 
 import { AngularFireModule } from '@angular/fire';
 import { AngularFirestoreModule } from '@angular/fire/firestore';
+import { ReactiveFormsModule } from '@angular/forms';
 
 @NgModule({
   declarations: [AppComponent, NavBarComponent],
@@ -15,7 +16,8 @@ import { AngularFirestoreModule } from '@angular/fire/firestore';
     BrowserModule,
     AppRoutingModule,
     AngularFireModule.initializeApp(environment.firebaseConfig),
-    AngularFirestoreModule
+    AngularFirestoreModule,
+    ReactiveFormsModule,
   ],
   providers: [],
   bootstrap: [AppComponent],

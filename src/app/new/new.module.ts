@@ -3,6 +3,7 @@ import { CommonModule } from '@angular/common';
 import { TemplateComponent } from './template/template.component';
 import { NewTemplateComponent } from './new-template/new-template.component';
 import { ReactiveFormsModule } from '@angular/forms';
+import { NewRoutingModule } from './new-routing.module';
 
 
 
@@ -10,7 +11,8 @@ import { ReactiveFormsModule } from '@angular/forms';
   declarations: [TemplateComponent, NewTemplateComponent],
   imports: [
     CommonModule,
-    ReactiveFormsModule
+    ReactiveFormsModule,
+    NewRoutingModule,
   ]
 })
 export class NewModule { }
