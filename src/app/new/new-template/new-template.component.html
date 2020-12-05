@@ -4,24 +4,35 @@
     <div class="form-group">
       <label for="title">Título *</label>
       <input formControlName="title" id="title" type="text" class="form-control">
+      <div *ngIf="(form.get('title').touched || form.get('title').dirty) && form.get('title').invalid">
+        <small class="text-danger">Campo requrido</small>
+      </div>
     </div>
     <div class="form-group">
       <label for="description">Descripción *</label>
       <textarea formControlName="description" class="form-control" id="description"></textarea>
+      <div *ngIf="(form.get('description').touched || form.get('description').dirty) && form.get('description').invalid">
+        <small class="text-danger">Campo requrido</small>
+      </div>
     </div>
     <div class="form-group">
       <label for="date">Fecha *</label>
       <input formControlName="date" class="form-control" id="date" type="date" min="1" max="30">
+      <div *ngIf="(form.get('date').touched || form.get('date').dirty) && form.get('date').invalid">
+        <small class="text-danger">Campo requrido</small>
+      </div>
     </div>
     <div class="form-group form-check">
       <input formControlName="featured" type="checkbox" class="form-check-input" id="exampleCheck1">
       <label class="form-check-label" for="exampleCheck1">Destacada</label>
     </div>
     <div class="form-group">
-      <label for="image">Imagen</label>
+      <label for="image">Url de Imagen</label>
       <input formControlName="imageUrl" type="url" placeholder="Dejar en blanco si no hay" class="form-control" id="image" aria-describedby="emailHelp">
     </div>
-    <button (click)="uploadNew()" class="btn btn-primary">Guardar</button>
+    <div class="img-visualizer" *ngIf=" this.form.get('imageUrl').value != '' ">
+      <img alt="preview" src="{{this.form.get('imageUrl').value}}">
+    </div>
+    <button (click)="uploadNew()" class="btn btn-dark ">{{this.isNew ? 'Guardar' : 'Actualizar'}}</button>
   </div>
-  {{form.value}}
 </div>

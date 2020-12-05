@@ -6,7 +6,7 @@ import { NewTemplateComponent } from './new-template/new-template.component';
 // que se han importado o bien que fueron definidos en este módulo
 // tales como: newTempleteComponent y TemplateComponent
 const routes: Routes = [
-  {path: 'form', component: NewTemplateComponent},
+  {path: ':newsId', component: NewTemplateComponent},
   {path: '**', redirectTo: 'home'}
 ];
 

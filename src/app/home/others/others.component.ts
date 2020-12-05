@@ -29,4 +29,8 @@ export class OthersComponent implements OnInit, OnDestroy {
     this.othersSubscription.unsubscribe();
   }
 
+  onDelete(id: string): void {
+    this.newsService.deleteNews(id);
+  }
+
 }

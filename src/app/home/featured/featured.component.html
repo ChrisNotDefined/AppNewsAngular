@@ -8,8 +8,8 @@
       <h5 class="card-title">{{new.title}}</h5>
       <p class="card-text">{{new.description}}</p>
       <div class="card-actions">
-        <a class="btn btn-dark">Editar</a>
-        <a class="btn btn-danger">Borrar</a>
+        <a class="btn btn-dark" routerLink="/form/{{new.id}}">Editar</a>
+        <a class="btn btn-danger" (click)="onDelete(new.id)">Borrar</a>
       </div>
     </div>
   </div>

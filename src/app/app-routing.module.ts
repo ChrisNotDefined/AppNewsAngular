@@ -8,7 +8,7 @@ const routes: Routes = [
   // Dentro de este módulo cargaremos los compoentens que pertenecen a este módulo,
   // por eso siempre creamos un módulo con su propio archivo de rutas
   // Comando para crear módulo y archivo de rutas: (ng generate module nombreModulo --routing)
-  {path: 'news', loadChildren: () => import('./new/new.module').then((m) => m.NewModule)},
+  {path: 'form', loadChildren: () => import('./new/new.module').then((m) => m.NewModule)},
   {path: '**', redirectTo: 'home'}
 ];
 

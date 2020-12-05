@@ -25,4 +25,8 @@ export class FeaturedComponent implements OnInit, OnDestroy {
   ngOnDestroy(): void {
     this.featuredSubscription.unsubscribe();
   }
+
+  onDelete(id: string): void {
+    this.newsService.deleteNews(id);
+  }
 }

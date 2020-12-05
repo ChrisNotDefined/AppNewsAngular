@@ -1,8 +1,9 @@
 .centerer {
-  height: calc(100vh - 56px);
+  min-height: calc(100vh - 56px);
   display: flex;
   align-items: center;
   justify-content: center;
+  padding: 50px;
 }
 
 .centered-card {
@@ -15,4 +16,17 @@
 
 h1 {
   text-align: center;
+}
+
+.img-visualizer {
+  padding: 1em;
+  display: flex;
+  flex-direction: row;
+  justify-content: center;
+  max-height: 160px;
+}
+
+.img-visualizer img {
+  max-height: 100%;
+  border-radius: 5px;
 }
