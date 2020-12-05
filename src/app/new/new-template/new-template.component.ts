@@ -29,7 +29,7 @@ export class NewTemplateComponent implements OnInit, OnDestroy {
       title: new FormControl('', Validators.required),
       description: new FormControl('', Validators.required),
       date: new FormControl('', Validators.required),
-      featured: new FormControl('', Validators.required),
+      featured: new FormControl(false, Validators.required),
       imageUrl: new FormControl(''),
     });
 
@@ -72,6 +72,8 @@ export class NewTemplateComponent implements OnInit, OnDestroy {
         await this.newsService.updateNew(this.params.newsId, news);
         this.router.navigate(['/', 'home', news.featured? 'featured' : 'news'])
       }
+    } else {
+      alert('Form inválido')
     }
   }
 
