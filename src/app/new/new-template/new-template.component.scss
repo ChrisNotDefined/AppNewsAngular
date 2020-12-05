@@ -3,7 +3,6 @@
   display: flex;
   align-items: center;
   justify-content: center;
-  padding: 50px;
 }
 
 .centered-card {
@@ -29,4 +28,5 @@ h1 {
 .img-visualizer img {
   max-height: 100%;
   border-radius: 5px;
+  object-fit: contain;
 }
